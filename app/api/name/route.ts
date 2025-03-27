@@ -1,3 +1,5 @@
+import { NextResponse } from "next/server";
+
 const NAMES = [
 	"Alice",
 	"Bob",
@@ -29,5 +31,5 @@ const NAMES = [
 
 export async function GET() {
 	const randomUser = NAMES[Math.floor(Math.random() * NAMES.length)];
-	return Response.json(randomUser);
+	return NextResponse.json(randomUser);
 }
